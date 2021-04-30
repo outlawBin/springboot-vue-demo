@@ -2,10 +2,13 @@
 
 #### 介绍
 一个springboot+vue+thymeleaf+mybatis-plus的前后端不分离的项目demo
-
+这是一个demo，模板，没有实际功能
 #### 软件架构
 软件架构说明
-
+springboot 2.3.7
+vue 2.6.12
+axios 0.21.0
+element-ui 2.14.1
 
 #### 安装教程
 
