@@ -1,0 +1,36 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 90
+# 应用名称
+spring:
+  application:
+    name: springboot-vue-demo
+  # 数据库驱动：
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据源名称
+    # 数据库连接地址
+    url: jdbc:mysql://localhost:3306/telecom?useSSL=false&serverTimezone=Asia/Shanghai
+    # 数据库用户名&密码：
+    username: root
+    password: root
+  # 配置返回的日期格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  # THYMELEAF (ThymeleafAutoConfiguration)
+  # 开启模板缓存（默认值： true ）
+  thymeleaf:
+    cache: false
+# 逻辑删除配置
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1 #已删除
+      logic-not-delete-value: 0 #未删除
+  # 打印SQL
+  #  configuration:
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # mapper文件位置
+  mapper-locations: classpath*:/mapper/*.xml
